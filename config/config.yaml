@@ -333,8 +333,8 @@ notification:
       from: "${{ secrets.EMAIL_USER }}"
       password: "${{ secrets.EMAIL_PASSWORD }}"
       to: "${{ secrets.EMAIL_USER }}"
-      smtp_server: "${{ secrets.SMTP_SERVER }}" 
-      smtp_port: "${{ secrets.SMTP_PORT }}"     
+      smtp_server: "smtp.qq.com"
+      smtp_port: 465  
 
     ntfy:
       server_url: "https://ntfy.sh"   # ntfy 服务器地址（可改为自托管）
