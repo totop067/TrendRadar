@@ -330,11 +330,12 @@ notification:
       chat_id: ""                     # Telegram Chat ID
 
     email:
-      from: "${{ secrets.EMAIL_USER }}"
-      password: "${{ secrets.EMAIL_PASSWORD }}"
-      to: "${{ secrets.EMAIL_USER }}"
+      from: "$EMAIL_USER"       # 改成这种格式
+      password: "$EMAIL_PASSWORD" # 改成这种格式
+      to: "$EMAIL_USER"         # 改成这种格式
       smtp_server: "smtp.qq.com"
-      smtp_port: 465  
+      smtp_port: 465
+      use_ssl: true
 
     ntfy:
       server_url: "https://ntfy.sh"   # ntfy 服务器地址（可改为自托管）
