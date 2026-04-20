@@ -123,7 +123,7 @@ presets:
     # 因为这个模式没有划分时间段，所以 default 就是全天的行为
     default:
       collect: true                # 采集数据（爬取热榜 + RSS）
-      analyze: false               # 不做 AI 分析（节省 API 费用）
+      analyze: true               # 不做 AI 分析（节省 API 费用）
       ai_mode: "current"           # AI 分析当前榜单
       push: true                   # 有新内容就推送
       report_mode: "incremental"   # 只推送新增内容，避免重复
@@ -191,11 +191,18 @@ presets:
         once:
           analyze: true            # 窗口内只分析一次
           push: true               # 窗口内只推送一次
+          
+     work_all_day:  # 自定义一个全天工作的积木
+        name: "AI全天候"
+        start: "00:00"
+        end: "23:59"
+        analyze: true
+        push: true     
 
     # 日计划 ── 把时间段组装成一天的安排
     day_plans:
       all_day:
-        periods: ["evening_summary"]
+        periods: ["work_all_day"]
 
     # 周映射 ── 每天用哪个日计划（1=周一 ... 7=周日）
     week_map:
