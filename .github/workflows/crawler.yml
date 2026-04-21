@@ -2,8 +2,7 @@ name: Get Hot News
 
 on:
   schedule:
-    - cron: "35 * * * *"
-  push:
+    - cron: "33 * * * *"
   workflow_dispatch:
 
 concurrency:
