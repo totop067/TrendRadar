@@ -57,6 +57,8 @@ platforms:
   sources:
     - id: "toutiao"
       name: "今日头条"
+    - id: "douyin"
+      name: "抖音"
     - id: "baidu"
       name: "百度热搜"
     - id: "wallstreetcn-hot"
@@ -73,8 +75,6 @@ platforms:
       name: "贴吧"
     - id: "weibo"
       name: "微博"
-    - id: "douyin"
-      name: "抖音"
     - id: "zhihu"
       name: "知乎"
 
