@@ -58,6 +58,7 @@ def render_html_content(
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="https://hangcv.cc.cd/file/AgACAgUAAyEGAATfLmpgAAMPaehYmsTXhznPMuEZVMO6jz_yDcIAArYQaxvnvUlXzwft2Gc9i90BAAMCAANtAAM7BA.png" type="image/x-icon">
         <title>热点新闻分析</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <style>
