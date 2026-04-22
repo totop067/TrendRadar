@@ -135,5 +135,13 @@ jobs:
           GITHUB_ACTIONS: true
         run: uv run python -m trendradar
 
-      - name: "Debug: List generated files"
-        run: ls -R
+      - name: Deploy to Cloudflare Pages
+        if: success()
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: trendradar
+          directory: ./output          # 👈 核心在这里！把 output 文件夹里的成品网页直接塞给 Pages
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+
