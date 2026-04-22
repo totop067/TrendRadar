@@ -141,7 +141,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: trendradar
+          projectName: ${{ secrets.CLOUDFLARE_PAGES_NAME }} 
           directory: ./output          # 👈 核心在这里！把 output 文件夹里的成品网页直接塞给 Pages
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
 
