@@ -134,3 +134,6 @@ jobs:
           S3_REGION: ${{ secrets.S3_REGION }}
           GITHUB_ACTIONS: true
         run: uv run python -m trendradar
+      - name: Debug: List generated files
+        run: ls -R  # 这会列出当前目录下所有生成的文件，你可以在 Action 的日志里看到它们
+
