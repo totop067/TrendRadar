@@ -170,12 +170,9 @@ jobs:
           GITHUB_ACTIONS: true
         run: uv run python -m trendradar
 
-      - name: Deploy to Cloudflare Pages
-        if: success()
-        uses: cloudflare/pages-action@v1
+      - name: Deploy to Cloudflare Pages (升级版)
+        uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: ${{ secrets.CLOUDFLARE_PAGES_NAME }} 
-          directory: ./output          
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          command: pages deploy ./output --project-name=${{ secrets.CLOUDFLARE_PAGES_NAME }} --commit-dirty=true
