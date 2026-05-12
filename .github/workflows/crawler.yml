@@ -170,7 +170,7 @@ jobs:
           GITHUB_ACTIONS: true
         run: uv run python -m trendradar
 
-      - name: Deploy to Cloudflare Pages (升级版)
+      - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
